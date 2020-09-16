@@ -9,12 +9,47 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!").padding()
+        Home()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct Home : View {
+    var body: some View {
+        VStack{
+            ZStack {
+                HStack{
+                    Button(action: {}, label: {
+                        Image("line.horizontal.3")
+                            .font(.system(size: 22))
+                            .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                    })
+                    Spacer(minLength: 0)
+                    
+                    Button(action: {}, label: {
+                        Image("pic1")
+                            .resizable()
+                            .renderingMode(.original)
+                            .frame(width: 35, height: 35)
+                            .clipShape(Circle())
+                    })
+                }
+                
+                Text("Home")
+                    .font(.title2)
+                    .fontWeight(.semibold)
+            }
+            .padding()
+            //.padding(.top,edges!.top)
+            .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+            .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1), radius: 5, x: 0, y: 5)
+            
+            Spacer()
+        }
     }
 }

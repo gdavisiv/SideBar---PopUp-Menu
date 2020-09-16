@@ -20,7 +20,11 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct Home : View {
-    var body: some View {
+    
+    @State var edges = UIApplication.shared.windows.first?.safeAreaInsets
+    @State var width = UIScreen.main.bounds.width
+    
+    var body: some View{
         VStack{
             ZStack {
                 HStack{
@@ -49,7 +53,12 @@ struct Home : View {
             .background(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
             .shadow(color: Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.1), radius: 5, x: 0, y: 5)
             
-            Spacer()
+            Spacer(minLength: 0)
+            
+            VStack{
+                
+            }
         }
+        //.ignoresSafeArea(.all, edges: .all)
     }
 }

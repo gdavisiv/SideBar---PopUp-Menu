@@ -29,9 +29,9 @@ struct Home : View {
             ZStack {
                 HStack{
                     Button(action: {}, label: {
-                        Image("line.horizontal.3")
+                        Image(systemName: "square.stack.3d.up")
                             .font(.system(size: 22))
-                            .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
+                            .foregroundColor(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)))
                     })
                     Spacer(minLength: 0)
                     

@@ -75,6 +75,13 @@ struct Home : View {
                                 .foregroundColor(.white)
                         })
                     }
+                    .padding()
+                    .edgesIgnoringSafeArea(.all)
+                    
+                    HStack{
+                        
+                    }
+                    
                     Spacer(minLength: 0)
                 }
                 .frame(width: width - 100)
@@ -83,5 +90,6 @@ struct Home : View {
             .background(Color.black.opacity(0.3))
         }
         //.ignoresSafeArea(.all, edges: .all)
+        .edgesIgnoringSafeArea(.all)
     }
 }

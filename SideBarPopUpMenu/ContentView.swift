@@ -76,10 +76,26 @@ struct Home : View {
                         })
                     }
                     .padding()
-                    .edgesIgnoringSafeArea(.all)
+                    .padding(.top,edges!.top)
+                    //.edgesIgnoringSafeArea(.all)
                     
-                    HStack{
-                        
+                        HStack(spacing: 15) {
+                            Image("pic1")
+                                .resizable()
+                                .frame(width: 75, height: 75)
+                                .clipShape(Circle())
+                            
+                            VStack(alignment: .leading, content: {
+                                Text("Tonya")
+                                    .font(.title)
+                                    .fontWeight(.semibold)
+                                
+                                Text("Tonya.W@gmail.com")
+                                    .fontWeight(.semibold)
+                                
+                            })
+                            .foregroundColor((Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))))
+                    
                     }
                     
                     Spacer(minLength: 0)

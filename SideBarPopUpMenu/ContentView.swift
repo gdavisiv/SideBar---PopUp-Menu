@@ -97,6 +97,14 @@ struct Home : View {
                             .foregroundColor((Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0))))
                     
                     }
+                        .padding(.horizontal)
+                    
+                            //Menu Buttons
+                    VStack(alignment: .leading, content: {
+                        //Need to create workaround for MenuButtons??
+                        //MenuButtons(image: "gear", title: "Settings")
+                        //MenuButtons(image: "gear", title: "Settings")
+                    })
                     
                     Spacer(minLength: 0)
                 }

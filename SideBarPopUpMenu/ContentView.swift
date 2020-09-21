@@ -102,9 +102,11 @@ struct Home : View {
                             //Menu Buttons
                     VStack(alignment: .leading, content: {
                         //Need to create workaround for MenuButtons??
-                        //MenuButtons(image: "gear", title: "Settings")
+                        MenuButtons(systemName: "gear", title: "Settings")
                         //MenuButtons(image: "gear", title: "Settings")
                     })
+                    .padding(.all)
+                    .padding(.leading,40)
                     
                     Spacer(minLength: 0)
                 }
